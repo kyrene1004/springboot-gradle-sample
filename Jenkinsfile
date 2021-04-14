@@ -6,7 +6,6 @@ pipeline {
                     git url: 'https://github.com/kyrene1004/springboot-gradle-sample.git'
                }
           }
-     }
           stage("Compile") {
                steps {
                     sh "./gradlew compileJava"
@@ -17,4 +16,5 @@ pipeline {
                     sh "./gradlew test"
                }
      }
+   }
 }
