@@ -5,25 +5,22 @@ pipeline {
                steps {
                     git url: 'https://github.com/kyrene1004/springboot-gradle-sample.git'
                }
-          }
-        //   stage("Compile") {
-        //        steps {
-        //             sh "./gradlew compileJava"
-        //        }
-        //   }
+           }
            stage("Build") {
                steps {
                     sh "./gradlew clean build"
                }
-          }
-          stage("Unit test") {
+           }
+           stage("Unit test") {
                steps {
                     sh "./gradlew test"
                }
-          }
-          stage("Deploy to /tmp") {
-              script{
-                  sh "mv sample-springboot-gradle-pipeline/build/libs/springboot-sample-app-0.0.1-SNAPSHOT.jar /tmp/springboot-sample-app-0.0.1-SNAPSHOT.jar"
+           }
+           stage("Deploy to /tmp") {
+               steps{
+                script{
+                        sh "mv sample-springboot-gradle-pipeline/build/libs/springboot-sample-app-0.0.1-SNAPSHOT.jar /tmp/springboot-sample-app-0.0.1-SNAPSHOT.jar"
+                }
               }
           }
 
