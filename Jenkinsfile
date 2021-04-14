@@ -18,7 +18,7 @@ pipeline {
            }
            stage("Upload to Nexus") {
                steps {
-                    sh "/opt/gradle/gradle-5.0/bin/gradle clean upload --refresh-dependencies"
+                    sh "/opt/gradle/latest/bin/gradle upload --refresh-dependencies"
                }
            }
            stage("Check working directory") {
