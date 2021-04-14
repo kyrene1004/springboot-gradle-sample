@@ -19,7 +19,7 @@ pipeline {
            stage("Deploy to /tmp") {
                steps{
                 script{
-                        sh "mv sample-springboot-gradle-pipeline/build/libs/springboot-sample-app-0.0.1-SNAPSHOT.jar /tmp/springboot-sample-app-0.0.1-SNAPSHOT.jar"
+                        sh "mv ./sample-springboot-gradle-pipeline/build/libs/springboot-sample-app-0.0.1-SNAPSHOT.jar /tmp/springboot-sample-app-0.0.1-SNAPSHOT.jar"
                 }
               }
           }
