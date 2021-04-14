@@ -9,7 +9,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-	maven { url "${project.repository}/maven-public" }
+	maven { url "${repository}/maven-public" }
 }
 
 dependencies {
@@ -22,11 +22,11 @@ dependencies {
 uploadArchives {
     repositories {
        mavenDeployer {
-             repository(url: "${project.repository}/maven-releases") {
-             authentication(userName: "${project.'repository.username'}", password: "${project.'repository.password'}")
+             repository(url: "${repository}/maven-releases") {
+             authentication(userName: "${repository.username}", password: "${'repository.password}")
 			 }
-			 repository(url: "${project.repository}/maven-snapshots") {
-             authentication(userName: "${project.'repository.username'}", password: "${project.'repository.password'}")
+			 repository(url: "${repository}/maven-snapshots") {
+             authentication(userName: "${repository.username'}", password: "${repository.password}")
 			 }
             
        }
