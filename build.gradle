@@ -23,7 +23,7 @@ uploadArchives {
     repositories {
        mavenDeployer {
              repository(url: "${repository}/maven-releases") {
-             authentication(userName: "${repository.username}", password: "${'repository.password}")
+             authentication(userName: "${repository.username}", password: "${repository.password}")
 			 }
 			 repository(url: "${repository}/maven-snapshots") {
              authentication(userName: "${repository.username}", password: "${repository.password}")
