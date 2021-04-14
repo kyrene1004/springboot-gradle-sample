@@ -26,7 +26,7 @@ uploadArchives {
              authentication(userName: "${repository.username}", password: "${'repository.password}")
 			 }
 			 repository(url: "${repository}/maven-snapshots") {
-             authentication(userName: "${repository.username'}", password: "${repository.password}")
+             authentication(userName: "${repository.username}", password: "${repository.password}")
 			 }
             
        }
