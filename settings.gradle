@@ -1,1 +1,4 @@
 rootProject.name = 'springboot-sample-app'
+repository  = http://172.31.111.158:8081/repository
+repository.username = nexus_uploader
+repository.password = infraem11

@@ -16,6 +16,11 @@ pipeline {
                     sh "./gradlew test"
                }
            }
+           stage("Upload to Nexus") {
+               steps {
+                    sh "./gradlew clean upload --refresh-dependencies"
+               }
+           }
            stage("Check working directory") {
                steps{
                 script{
